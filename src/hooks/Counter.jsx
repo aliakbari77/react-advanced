@@ -1,8 +1,11 @@
 import React, { Fragment, useState } from "react";
+import useDocumentTitle from "./useDocumentTitle";
 
 function Counter(props) {
   const [count, setCount] = useState(0); // count = 0
   const [name, setName] = useState(""); // name = ""
+
+  useDocumentTitle(`${name} has clicked ${count} times.`);
 
   return (
     <Fragment>
